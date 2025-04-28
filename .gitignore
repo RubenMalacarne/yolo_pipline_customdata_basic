@@ -1,0 +1,10 @@
+# Ignore dataset folders
+custom_dataset/
+data/
+
+# Ignore training outputs
+runs/
+
+# Ignore model weights
+yolo11s.pt
+yolo11n.pt
