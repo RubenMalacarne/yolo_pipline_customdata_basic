@@ -1,6 +1,6 @@
 # YOLO Training with CoppeliaSim Dataset
 
-This repository contains the code and instructions to train a YOLO model for object detection, using custom images captured from the CoppeliaSim simulator.
+This repository contains the code and instructions to train a basic YOLO model for object detection, using custom images captured from the CoppeliaSim simulator.
 
 The objective is to detect various objects (cubes, spheres, robot parts) on a table for robotics tasks like pick-and-place, with integration into ROS 2 environments.
 
