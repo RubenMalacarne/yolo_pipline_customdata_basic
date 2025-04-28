@@ -50,6 +50,3 @@ nvidia-smi
 
 # Install Ultralytics
 pip install ultralytics
-
-# Train the model
-python train.py
