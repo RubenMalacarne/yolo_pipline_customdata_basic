@@ -6,7 +6,7 @@ from ultralytics import YOLO
 import yaml
 
 def create_data_yaml(path_to_classes_txt, path_to_data_yaml, custom_data_dir, data_path):
-    # Read classes.txt to get class names
+    
     if not os.path.exists(path_to_classes_txt):
         print(f'classes.txt file not found! Please create a classes.txt labelmap and move it to {path_to_classes_txt}')
         return
@@ -29,17 +29,17 @@ def create_data_yaml(path_to_classes_txt, path_to_data_yaml, custom_data_dir, da
     print(f'Created config file at {path_to_data_yaml}')
 
 def main():
-    # Adesso notebook_dir è il percorso di yolo_pipline_customdata_basic
+    
     notebook_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Tutto quello che creiamo sta dentro notebook_dir
+    
     custom_data_path = os.path.join(notebook_dir, 'custom_dataset')
     data_path = os.path.join(notebook_dir, 'data')
     zip_file_path = os.path.join(notebook_dir, 'data.zip')
     script_path = os.path.join(notebook_dir, 'train_val_split.py')
     runs_dir = os.path.join(notebook_dir, 'runs') 
 
-    # Se esiste già, lo puliamo
+    
     if os.path.exists(custom_data_path):
         shutil.rmtree(custom_data_path)
     if os.path.exists(runs_dir):
@@ -52,7 +52,7 @@ def main():
     with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
         zip_ref.extractall(custom_data_path)
 
-    # Lancia split
+    
     subprocess.run(
         ['python3', script_path, '--datapath', custom_data_path, '--train_pct', '0.9'],
         check=True
@@ -67,7 +67,7 @@ def main():
 
     create_data_yaml(path_to_classes_txt, data_yaml_path, custom_data_path, data_path)
 
-    # Stampa file yaml creato
+    
     with open(data_yaml_path, 'r') as f:
         print('\nFile contents:\n')
         print(f.read())
@@ -86,11 +86,11 @@ def main():
 
     print('Training completato!')
 
-    # Percorsi relativi
+    
     validation_images_path = os.path.join(data_path, 'validation', 'images')
     new_model_path = os.path.join(runs_dir, 'train', 'weights', 'best.pt')
 
-    # Ricarica il nuovo modello
+    
     model_2 = YOLO(new_model_path)
 
     # Predizioni
