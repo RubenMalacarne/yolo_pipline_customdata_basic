@@ -1,6 +1,5 @@
 # Ignore dataset folders
 custom_dataset/
-data/
 
 # Ignore training outputs
 runs/
@@ -8,3 +7,5 @@ runs/
 # Ignore model weights
 yolo11s.pt
 yolo11n.pt
+
+data.zip
