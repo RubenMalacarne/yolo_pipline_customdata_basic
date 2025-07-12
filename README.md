@@ -14,7 +14,9 @@ The objective is to detect various objects (cubes, spheres, robot parts) on a ta
 - **Final Goal**: Deploy trained model in CoppeliaSim + ROS 2.
 
 ---
-
+## download yolo11 
+follow this link:  [Yolo11](https://docs.ultralytics.com/it/models/yolo11/#supported-tasks-and-modes)
+---
 ## Main Steps
 
 1. **Dataset Creation**  
