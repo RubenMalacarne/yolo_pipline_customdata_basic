@@ -16,6 +16,7 @@ The objective is to detect various objects (cubes, spheres, robot parts) on a ta
 ---
 ## download yolo11 
 follow this link:  [Yolo11](https://docs.ultralytics.com/it/models/yolo11/#supported-tasks-and-modes)
+
 ---
 ## Main Steps
 
