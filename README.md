@@ -26,6 +26,8 @@ follow this link:  [Yolo11](https://docs.ultralytics.com/it/models/yolo11/#suppo
 2. **Setup**  
    Install required packages and prepare data structure.
 
+   change data.zip in right way
+
 3. **Training**  
    Fine-tune a YOLO model (e.g., YOLOv11s) on the dataset.
 
